@@ -26,6 +26,6 @@ public class ProductService {
 
     public List<Product> getTop10LatestProducts() {
         LocalDateTime sevenDaysAgo = LocalDateTime.now().minusDays(7);
-        return productRepo.findTop10CreateAt7Days(sevenDaysAgo, PageRequest.of(0,4));
+        return productRepo.findTop10CreateAt7Days(sevenDaysAgo, PageRequest.of(0,10));
     }
 }
